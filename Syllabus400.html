@@ -2,10 +2,16 @@
 <html>
   <head>
     <title>Title of the document</title>
+    <script>
+      window.onload = function() {
+         var iframe = document.getElementById("myiframe");
+         iframe.width = iframe.contentWindow.document.body.scrollWidth;
+         iframe.height = iframe.contentWindow.document.body.scrollHeight;
+      }
+   </script>
   </head>
   <body>
-    <iframe src="https://YiyaoLuo.github.io/Syllabus_of_ECON400S221-3.pdf" sandbox="allow-same-origin"
-    onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';">
+    <iframe id="myiframe" src="https://YiyaoLuo.github.io/Syllabus_of_ECON400S221-3.pdf" >
     </iframe>
   </body>
 </html>
